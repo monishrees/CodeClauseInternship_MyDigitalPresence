@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <h1>MONI SHREE</h1>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">container</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi,I'm <span>Moni</span><br> Shree S From India</h1>      
+        </div>
+
+    </div>
+</div> 
+<!-- ====== about ====== -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="suji pic5.jpg" height="500px">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello!I'm Moni Shree S, a budding frontend developer with a passion for crafting beautiful and intuitive user interfaces. Although I'm relatively new to the industry, my enthusiasm for web development knows no bounds, and I'm eager to make my mark in this dynamic field.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('mini projects')">Mini Projects</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>            
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Application Development</span><br>Building Android apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="mini projects">
+                    <ul>
+                        <li><span>2023</span><br>Finance Plus+ website</li>
+                        <li><span>Current</span><br>Global Sustainablity web application</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2007-2022</span><br>HSC from CSI Christ Matric Higher Secondary School</li>
+                        <li><span>2022-Current</span><br>Dayananda Sagar University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- ====== portfolio ======= -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title"> My Projects </h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="propic1.png" alt="img1">
+                <div class="layer">
+                    <h3>Finance Plus</h3>
+                    <p>Finance Pius is a comprehensive web application designed to streamline financial management tasks for individuals and small businesses. Loveraging the power of HTML, JavaScript, and CSS, Finance Plus provides users with a user-friendly interface to track expenses, manage budgets, and visualize financial data.</p>
+                </div>            
+            </div>
+            <div class="project">
+                <img src="propic2.jpg" alt="img2">
+                <div class="layer">
+                    <h3>Global Sustainability</h3>
+                    <p>Welcome to the Global Sustainability Hub, your premier online destination for insights, resources, and action on planetary health and well-being. Our website serves as a beacon of hope and innovation in the quest for a more sustainable world.Join us in shaping a world where people and planet thrive in harmony.
+                    </p>
+                </div>            
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ====== contact ====== -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><img src="pplogo.png">monishree.s08@gmail.com</p>
+                <p><img src="phlogo.png">9080067891</p>
+                <div class="social-icons">
+                    <img src="fblogo.png">
+                    <img src="twtlogo.png">
+                    <img src="iglogo.png">
+                    <img src="lnkinlogo.png">
+                </div>
+                <a href="Moni Shree Resume (1).pdf" download class="btn btn2">Download CV</a>
+            </div>
+                <div class="contact-right">
+                    <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsbyClassName("tab-links");
+    var tabcontents = document.getElementsbyClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
